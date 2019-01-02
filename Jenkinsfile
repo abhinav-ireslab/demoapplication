@@ -15,7 +15,7 @@ pipeline {
   stage('Docker Build') {
       agent any
       steps {
-      sh 'docker build -t docker030303/demoapplication:latest .'   
+      sh 'docker build -t docker030303/demo-application:latest .'   
       }
     }
        
@@ -23,7 +23,7 @@ pipeline {
        agent any
        steps {
        sh 'docker login -u docker030303 -p Abhinav@123Ires'
-       sh 'docker push docker030303/demoapplication'
+       sh 'docker push docker030303/demo-application'
 	  
 	
      }
